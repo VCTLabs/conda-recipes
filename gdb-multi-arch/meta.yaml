@@ -10,8 +10,11 @@ source:
   url: https://github.com/bminor/binutils-gdb/archive/gdb-{{ version }}-release.tar.gz
   sha256: {{ sha256 }}
 
+  patches:
+  - 0001-binutils-drop-redundant-program_name-definition-fno-.patch # [not win]
+
 build:
-  number: '4'
+  number: '5'
   skip: True  # [win]
 
 requirements:
